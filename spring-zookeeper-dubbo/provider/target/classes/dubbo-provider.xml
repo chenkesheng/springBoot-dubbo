@@ -12,7 +12,7 @@
     <dubbo:protocol name="dubbo" port="20880"/>
     <!--<dubbo:protocol name="rest" port="8080" server="tomcat"  contextpath="/dubbo"/>-->
     <!--暴露服务接口-->
-    <dubbo:service interface="service.HelloService" ref="helloService"/>
+    <dubbo:service interface="service.HelloService" ref="helloService" retries="0" timeout="5000"/>
 
     <bean id="helloService" class="dubbo.provider.service.impl.HelloServiceImpl"/>
 </beans>
